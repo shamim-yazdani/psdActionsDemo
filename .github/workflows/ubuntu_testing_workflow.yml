@@ -1,7 +1,7 @@
-name: GitHub Actions Python Execution
-run-name: Testing Github Actions in real action
-on: [push]
+name: GitHub Actions Ubuntu Execution
+run-name: Testing Github Actions for Ubuntu Script
 
+on: [push]
 
 jobs:
   trail-python-run:

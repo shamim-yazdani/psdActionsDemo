@@ -1,5 +1,6 @@
 name: GitHub Actions Python Execution
-run-name: Testing Github Actions in real action
+run-name: Testing Github Actions for Python script
+
 on: [push]
 
 
