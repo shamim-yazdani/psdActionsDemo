@@ -1,0 +1,24 @@
+name: GitHub Actions Python Execution
+run-name: Testing Github Actions in real action
+on: [push]
+
+
+jobs:
+  trail-python-run:
+    runs-on: ubuntu-latest
+    steps:
+      # Cloning the github to the runner system
+      - uses: actions/checkout@v4
+      
+      # Running some python commands to see the installation is as desired
+      - name: Display ubuntu version we are seeing
+        run: lsb_release -a
+
+      - name: changing the execution mode to make it executable
+        run: |
+          chmod +x ubuntu_tester.sh
+
+      # Run the Script in our case its the ubuntu_tester.sh
+      - name: Run ubuntu_tester.sh script and see the output
+        run: |
+          ./ubuntu_tester.sh
