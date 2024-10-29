@@ -4,7 +4,7 @@ run-name: Testing Github Actions for Ubuntu Script
 on: [push]
 
 jobs:
-  trail-python-run:
+  trail-ubuntu-run:
     runs-on: ubuntu-latest
     steps:
       # Cloning the github to the runner system

@@ -1,0 +1,29 @@
+
+name: Run Node JS Test cases
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  node-js-test-case-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+
+      - name: Run npm install to install all dependencies
+        run: |
+          npm install
+      
+      - name: Run all the node test cases
+        run: |
+          npm test
